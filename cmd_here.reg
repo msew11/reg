@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+; 为文件夹本身添加选项（管理员）
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\cmd_here_admin]
+@="CMD here(admin)"
+"Icon"="cmd.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\cmd_here_admin\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; 为文件夹背景（空白处）添加选项（管理员）
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell\cmd_here_admin]
+@="CMD here(admin)"
+"Icon"="cmd.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell\cmd_here_admin\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; ============================================
+
+; 为文件夹右键菜单添加选项
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\cmd_here]
+@="CMD here"
+"Icon"="cmd.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\cmd_here\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; 为文件夹背景（空白处）右键菜单添加选项
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\cmd_here]
+@="CMD here"
+"Icon"="cmd.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\cmd_here\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; ============================================
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""
